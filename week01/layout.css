@@ -1,0 +1,124 @@
+:root {
+  /* purple-lilacLavender palette */
+  --bg-dark: #2b2b31;        /* dark header/footer */
+  --bg-panel: #e8e4ea;       /* light lavender main content background */
+  --text: #1e1e1e;
+  --nav: #0b0b0b;             /* dark nav */
+  --accent: #a780d6;           /* lavender accent */
+  --link: #ffffff;
+
+  --purple-100: #efe7ff;
+  --purple-200: #d0b9f2;
+  --lavender-400: #b39ddb;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: #f7f5fb; }
+
+/* General container to apply Grid on a suitable layer */
+.layout-root {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header, body, footer */
+  min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+  background: var(--bg-dark);
+  color: #fff;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.header-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.main-nav {
+  background: #000;
+  border-radius: 4px;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* CSS Flex for the navigation menu */
+  gap: 28px;
+}
+.nav-item a {
+  display: block;
+  padding: 12px 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-item a:hover {
+  color: var(--purple-100);
+  background: rgba(167, 122, 210, 0.6);
+  border-radius: 4px;
+}
+
+/* Main grid with two columns (main content and aside) */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  background: #fff;
+}
+
+.content-main {
+  background: var(--bg-panel);
+  padding: 40px 28px;
+}
+.content-aside {
+  background: #fff;
+  padding: 40px 28px;
+  border-left: 1px solid #e5e5e5;
+}
+.content-main h2,
+.content-aside h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content-main p,
+.content-aside p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+.site-footer p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+/* Responsive: on smaller screens, use a single column */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-aside {
+    border-left: 0;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 0;
+  }
+}
