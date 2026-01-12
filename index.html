@@ -1,11 +1,82 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Fabiana Elizabeth Moya</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals; Fabiana Elizabeth Moya; A page layout demonstrating header, main with cards, and footer with dynamic year and last modified using JavaScript." />
+  <meta name="author" content="Fabiana Elizabeth Moya" />
+  <!-- Link to css -->
+  <link rel="stylesheet" href="/styles/base.css" />
+  <script src="/scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Fabiana Elizabeth Moya</h1>
+  <!-- Header: title and navigation -->
+  <header role="banner" aria-label="Site header">
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="https://www.linkedin.com/fabym93" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=en" target="_blank" rel="noopener">Scriptures</a>
+      <a href="#" aria-label="Final Project folder (placeholder)">Final Project</a>
+    </nav>
+  </header>
+
+  <!-- Main content: 2 cards with image and txt -->
+  <main role="main" aria-label="Main content">
+    <h1>Fabiana Elizabeth Moya</h1>
+
+    <section class="layout" aria-label="Profile cards">
+      <!-- Card 1 -->
+      <section class="card" aria-labelledby="card1-title">
+        <h2 id="card1-title">About Me</h2>
+        <div class="card-content">
+          <div style="flex: 1;">
+            <p>My name is Fabiana. I´m from Salta Argentina. Currently, I'm studying Software development in BYU. I enjoy spending time with my family and learning new technologies.</p>
+            <p>I love music, especially piano covers. I really like to share time and happy moments with my family and friends. In the church, I serve like a first counselor of Primary. My favourite part of this calling is time to sing and receive the love from children.</p>
+          </div>
+          <img src="images/profile.webp" alt="Portrait of Fabiana" style="width:180px; height:auto;">
+        </div>
+      </section>
+
+      <!-- Card 2 -->
+      <section class="card" aria-labelledby="card2-title">
+        <h2 id="card2-title">Web Dev Resources</h2>
+        <ul>
+          <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3 Schools</a></li>
+          <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
+          <li><a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a></li>
+          <li><a href="https://example.com/placeholder" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer with dynamic year and last modified -->
+  <footer role="contentinfo" aria-label="Site footer">
+    <p>
+      © <span id="currentyear"></span> 🌺 Fabiana Moya 🌺 Salta, Argentina
+    </p>
+    <p id="lastModified">Last Modified: </p>
+  </footer>
+
+  <!-- JavaScript for dynamic year and last modified -->
+  <script>
+    // Populate current year
+    (function() {
+      var yearSpan = document.getElementById('currentyear');
+      var now = new Date();
+      yearSpan.textContent = now.getFullYear();
+    })();
+
+    // Populate last modified date
+    (function() {
+      var lm = document.getElementById('lastModified');
+      var lastMod = document.lastModified;
+      lm.textContent = 'Last Modified: ' + lastMod;
+    })();
+  </script>
 </body>
 </html>

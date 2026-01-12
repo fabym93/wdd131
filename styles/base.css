@@ -1,0 +1,115 @@
+/* 1) Import Playfair Display (weights 400 y 700) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+
+:root {
+  --bg: #dfdfae;
+  --primary: #2c5d8f;
+  --accent: #e76f51;
+  --card: #ffffff;
+  --text: #1f1f1f;
+  --muted: #555;
+  --shadow: rgba(0,0,0,.12);
+  --bg2: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* 3) Apply Playfair Display in title and header */
+header #course-title,
+main h1,
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; 
+}
+
+header #course-title { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  gap: 16px;
+  padding: 8px 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,.4);
+  background: var(--primary);
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: relative;
+  transition: color .2s ease, background .2s ease;
+}
+header nav a:hover,
+header nav a:focus {
+  color: #0e1b2a;
+  background: #fff;
+  outline: none;
+}
+header nav a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+main {
+  padding: 28px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card { background: var(--card); border: 1px solid #e5e5e5; border-radius: 10px;
+  padding: 16px; box-shadow: 0 2px 6px var(--shadow); }
+.card h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin: 0 0 8px 0;
+}
+.card-content { display: flex; gap: 14px; align-items: flex-start; }
+.card-content img { width: 150px; height: auto; border-radius: 6px; }
+.card p { margin: 0 0 8px; color: var(--muted); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  header #course-title { font-size: 2rem; }
+}
+
+footer {
+  background: #1f3a62;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 20px;
+  text-align: center;
+}
+footer p { margin: 6px 0; }
+
+/* accesible approach */
+header nav a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
