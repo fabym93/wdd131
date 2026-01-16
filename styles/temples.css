@@ -36,6 +36,11 @@ header nav a {
   font-size: 14px;
 }
 
+nav a:hover {
+  color: #ffd700; /* different text color */
+  background-color: rgba(59, 0, 102,0.75);
+  text-decoration: underline;}
+
 /* Main container */
 main {
   padding: 20px;
