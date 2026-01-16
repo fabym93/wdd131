@@ -17,7 +17,7 @@ body {
 
 /* Header */
 header {
-  background: #3b0066; /* purple header */
+  background: rgb(128 0 128); /* purple header */
   color: #fff;
   padding: 16px 20px;
 }
@@ -75,7 +75,7 @@ section[aria-label="Temple gallery"] figcaption {
 
 /* Footer */
 footer{
-  background: #3b0066;
+  background: rgb(128 0 128);
   color: #fff;
   padding: 14px 16px;
   text-align: center;
