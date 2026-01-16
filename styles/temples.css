@@ -25,11 +25,13 @@ header h1 {
   font-size: 28px;
 }
 header nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
   margin-top: 8px;
 }
 header nav a {
   color: #fff;
-  margin-right: 14px;
   text-decoration: none;
   font-size: 14px;
 }
