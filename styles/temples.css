@@ -11,8 +11,8 @@ html, body {
 }
 body {
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  color: purple;
-  background: #fff;
+  color: rgb(128 0 128);
+  background: rgb(200,210,255);
 }
 
 /* Header */
