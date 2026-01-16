@@ -1,0 +1,16 @@
+/* Desktop: three columns (min-width: 1024px) */
+@media (min-width: 1024px) {
+  section[aria-label="Temple gallery"] {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  }
+  header h1 { font-size: 32px; }
+  section[aria-label="Temple gallery"] figcaption { font-size: 15px; }
+}
+
+/* Optional enhancements for desktop only */
+header {
+  padding: 18px 24px;
+}
+footer{
+  font-size: 14px;
+}

@@ -1,0 +1,86 @@
+
+.roboto- uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+/* Reset and base styles (mobile-first) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* Header */
+header {
+  background: #3b0066; /* purple header */
+  color: #fff;
+  padding: 16px 20px;
+}
+header h1 {
+  font-size: 28px;
+}
+header nav {
+  margin-top: 8px;
+}
+header nav a {
+  color: #fff;
+  margin-right: 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Main container */
+main {
+  padding: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Gallery: mobile default (1 column) */
+section[aria-label="Temple gallery"] {
+  display: grid;
+  grid-template-columns: 1fr; /* single column on mobile */
+  gap: 20px;
+  padding: 0 4px;
+  justify-items: center;
+}
+section[aria-label="Temple gallery"] figure {
+  text-align: center;
+  width: 100%;
+}
+section[aria-label="Temple gallery"] img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+section[aria-label="Temple gallery"] figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #2b2b66;
+}
+
+/* Footer */
+footer{
+  background: #3b0066;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: center;
+}
