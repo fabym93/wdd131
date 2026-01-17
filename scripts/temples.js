@@ -1,64 +1,74 @@
 // temples.js
 
-(function () {
-  // Actualizar año en el footer
-  var yearSpan = document.getElementById('currentyear');
-  if (yearSpan) {
-    var now = new Date();
-    yearSpan.textContent = now.getFullYear();
-  }
+(function () { 
+// Update year in footer 
+var yearSpan = document.getElementById('currentyear'); 
+if (yearSpan) { 
+var now = new Date(); 
+yearSpan.textContent = now.getFullYear(); 
+} 
 
-  // Actualizar fecha de última modificación
-  var lm = document.getElementById('lastModified');
-  if (lm) {
-    lm.textContent = 'Last Modified: ' + document.lastModified;
-  }
+// Update last modified date 
+var lm = document.getElementById('lastModified'); 
+if (lm) { 
+lm.textContent = 'Last Modified: ' + document.lastModified; 
+} 
 
-  // Hamburger Menu (solo móvil)
-  // Assumimos una estructura básica:
-  // <button id="hamburger" aria-label="Menú" class="hamburger" aria-expanded="false" aria-controls="navlinks">☰</button>
-  // <nav id="navlinks" class="nav-links">...</nav>
+// Hamburger Menu (mobile only) 
 
-  var hamburgerBtn = document.getElementById('hamburger');
-  var navLinks = document.getElementById('navlinks');
 
-  // Si no existen elementos, no hacer nada
-  if (hamburgerBtn && navLinks) {
-    // Crear el botón si no existe (opcional, ya podría estar en HTML)
-    function showMobileHamburger() {
-      // Mostrar/ocultar por tamaño usando CSS; aquí solo aseguramos el comportamiento
-      // Comprobamos ancho para decidir estado inicial
-      var isMobile = window.matchMedia('(max-width: 599px)').matches;
-      if (isMobile) {
-        hamburgerBtn.style.display = 'inline-block';
-        // Ocultar el menú por defecto en mobile
-        navLinks.style.display = 'none';
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerBtn.textContent = '☰'; // hamburger icono
-      } else {
-        hamburgerBtn.style.display = 'none';
-        navLinks.style.display = 'block';
-      }
-    }
+var hamburgerBtn = document.getElementById('hamburger');
 
-    // Listener de toggling
-    function toggleMenu() {
-      var open = navLinks.style.display === 'block';
-      navLinks.style.display = open ? 'none' : 'block';
-      hamburgerBtn.setAttribute('aria-expanded', String(!open));
-      hamburgerBtn.textContent = open ? '☰' : '✖';
-    }
+var navLinks = document.getElementById('navlinks');
 
-    // Cambiar al tamaño de ventana
-    function handleResize() {
-      showMobileHamburger();
-    }
+// If no elements exist, do nothing
 
-    // Inicial
-    showMobileHamburger();
+if (hamburgerBtn && navLinks) {
 
-    // Eventos
-    hamburgerBtn.addEventListener('click', toggleMenu);
-    window.addEventListener('resize', handleResize);
-  }
+// Create the button if it doesn't exist 
+
+function showMobileHamburger() {
+
+// Show/hide by size using CSS; here we only ensure the behavior
+
+// Check width to decide initial state
+
+var isMobile = window.matchMedia('(max-width: 599px)').matches;
+
+if (isMobile) {
+
+hamburgerBtn.style.display = 'inline-block';
+
+// Hide the default menu on mobile
+
+navLinks.style.display = 'none'; 
+
+hamburgerBtn.setAttribute('aria-expanded', 'false'); 
+hamburgerBtn.textContent = '☰'; // hamburger icon 
+} else { 
+hamburgerBtn.style.display = 'none'; 
+navLinks.style.display = 'block'; 
+} 
+} 
+
+// toggling listener 
+function toggleMenu() { 
+var open = navLinks.style.display === 'block'; 
+navLinks.style.display = open ? 'none': 'block'; 
+hamburgerBtn.setAttribute('aria-expanded', String(!open)); 
+hamburgerBtn.textContent = open ? '☰' : '✖'; 
+} 
+
+// Change to window size 
+function handleResize() { 
+showMobileHamburger(); 
+} 
+
+// Initial 
+showMobileHamburger(); 
+
+// Events 
+hamburgerBtn.addEventListener('click', toggleMenu); 
+window.addEventListener('resize', handleResize); 
+}
 })();
