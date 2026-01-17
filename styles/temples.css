@@ -73,6 +73,17 @@ section[aria-label="Temple gallery"] figcaption {
   color: #2b2b66;
 }
 
+.hamburger {
+display: none;
+background: transparent;
+border: none;
+color: inherit;
+font-size: 1.25rem;
+cursor: pointer;
+padding: 8px;
+border-radius: 4px;
+} 
+
 /* Footer */
 footer{
   background: rgb(128 0 128);
