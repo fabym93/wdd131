@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <meta name="description" content="Album of images of temples applying principles of views from different devices">
-    <meta name="author" content="Fabiana Elizabeth Moya">
-    <!-- Link to css -->
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 600px)">
-    
-    <!--link to typography by google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <meta name="description" content="Album of images of temples applying principles of views from different devices">
+  <meta name="author" content="Fabiana Elizabeth Moya">
+  <!-- Link to css -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 600px)">
+  <!--link to typography by google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- First layout block -->
   <header>
     Temple Album
-    <nav>
+    <!-- Hamburger Button (only in mobile) -->
+    <button id="hamburger" class="hamburger" aria-label="open menu" aria-expanded="false" aria-controls="navlinks" style="display:none;">☰</button>
+
+    <!-- Nav Menú (Shown or hidden by js) -->
+    <nav id="navlinks" aria-label="Main navigation">
       <a href="#">Home</a>
       <a href="#">Old</a>
       <a href="#">New</a>
@@ -29,87 +31,68 @@
       <a href="#">Small</a>
     </nav>
   </header>
+
   <!-- Main -->
   <main>
-
     <h1>Home</h1>
-    
+
     <section aria-label="Temple gallery">
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
-      <figcaption>Salta Argentina Temple</figcaption>
-    </figure>
-
+      <figure>
+        <img src="/week02/images/salta-temple" alt="Salta Argentina Temple">
+        <figcaption>Salta Argentina Temple</figcaption>
+      </figure>
     </section>
   </main>
 
   <!-- Footer with dynamic year and last modified -->
   <footer aria-label="Site footer">
     <p>
-      © <span id="currentyear"></span> 🌺 Fabiana Moya 🌺 Salta, Argentina
+      © <span id="currentyear"></span> 🌺 Fabiana E. Moya 🌺 Salta, Argentina
     </p>
     <p id="lastModified"> Last Modified: </p>
   </footer>
 
-  <!-- JavaScript for dynamic year and last modified -->
-  <script>
-    // Populate current year
-    (function() {
-      var yearSpan = document.getElementById('currentyear');
-      var now = new Date();
-      yearSpan.textContent = now.getFullYear();
-    })();
-
-    // Populate last modified date
-    (function() {
-      var lm = document.getElementById('lastModified');
-      var lastMod = document.lastModified;
-      lm.textContent = 'Last Modified: ' + lastMod;
-    })();
-  </script>
-
-  
+  <!-- JavaScript -->
+  <script src="/scripts/temples.js"></script>
 </body>
-
-
 </html>
