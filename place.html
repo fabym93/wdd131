@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>South Korea</title>
+
+  <meta name="description" content="Page about South Korea" />
+  <meta name="author" content="Fabiana Elizabeth Moya">
+
+  <link rel="stylesheet" href="styles/sk-desktop.css">
+  <link rel="stylesheet" href="styles/sk-mobile.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>South Korea</h1>
+  </header>
+
+  <!-- MAIN / HERO -->
+  <main class="container">
+
+    <!-- IMAGE (VISIBLE ONLY ON MOBILE) -->
+    <section class="image-section">
+      <img src="images/sk1.webp" alt="Landscape of South Korea">
+    </section>
+
+    <!-- DATA PANEL -->
+    <aside class="panel data-panel">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 100,210 sq km</li>
+        <li><strong>Population:</strong> 51,744,876</li>
+        <li><strong>Capital:</strong> Seoul</li>
+        <li><strong>Languages:</strong> Korean</li>
+        <li><strong>Currency:</strong> South Korean Won (KRW)</li>
+        <li><strong>Time Zone:</strong> UTC+9</li>
+        <li><strong>Calling Code:</strong> +82</li>
+        <li><strong>Internet TLD:</strong> .kr</li>
+      </ul>
+    </aside>
+
+    <!-- WEATHER PANEL -->
+    <aside class="panel weather-panel">
+      <h2>Weather</h2>
+      <div class="weather-icon">
+        <img src="images/weathericon.svg" alt="Weather icon">
+      </div>
+      <ul>
+        <li><strong>Temperature:</strong> 10 °C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> 5 km/h</li>
+        <li><strong>Wind Chill:</strong> 9.8 °C</li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo" aria-label="Site footer">
+    <p>
+      © <span id="currentyear"></span> 🌺 Fabiana Moya 🌺 Salta, Argentina
+    </p>
+    <p id="lastModified">Last Modified:</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent =
+      "Last Modified: " + document.lastModified;
+  </script>
+
+</body>
+</html>
