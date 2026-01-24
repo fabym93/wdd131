@@ -15,21 +15,23 @@ body {
   background-color: #c8102e;
   color: white;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem ;
 }
 
 /* HERO / MAIN CONTAINER */
 .hero {
-  position: relative;
-  height: 320px;              /* 🔑 controla la altura REAL */
+  position: absolute;
+  height: 320px;              
   padding: 1rem;
 
-  background-image: url("../images/sk1.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
+img{
+  display: block;
+  max-inline-size: 100%;
+  height: auto;
+      
+}
 
 
 /* DARK OVERLAY FOR CONTRAST */
@@ -82,4 +84,5 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+  width: 100%;
 }
