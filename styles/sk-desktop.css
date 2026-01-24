@@ -5,6 +5,33 @@
   box-sizing: border-box;
 }
 
+:root {
+/* Color Pallete) */
+--korea-red: #c8102e; 
+--korea-red-dark: #a50f1d;
+--korea-black: #1a1a1a;
+--korea-white: #ffffff;
+
+--korea-blue: #2a4f8f; /* deepblue*/
+--korea-blue-light: #6a8dbf;
+
+--korea-green: #0a6a50;
+--korea-green-light: #2e9a7d;
+
+--panel-bg: rgba(255, 255, 255, 0.88);
+--panel-radius: 10px;
+/* Tipografía y fondo neutro para buen contraste si se usa en varios temas */
+--text: #1b1b1b;
+--bg: #f7f7f7;
+/* Sombra suave para consistencia */
+--shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+html , body {background: var(--bg);
+color: var(--text);
+height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", system-ui, sans-serif;
@@ -12,10 +39,11 @@ body {
 
 /* HEADER */
 .site-header {
-  background-color: #c8102e;
-  color: white;
-  text-align: center;
-  padding: 1.5rem ;
+background-color: var(--korea-red-dark);
+color: var(--korea-white);
+text-align: center;
+padding: 1.5rem;
+
 }
 
 /* HERO / MAIN CONTAINER */
@@ -45,21 +73,23 @@ img{
 
 /* PANELS (CARDS) */
 .panel {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.88);
-  padding: 1rem 1.2rem;
-  border-radius: 10px;
-  width: 260px;
-  z-index: 2;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+position: absolute;
+background: var(--panel-bg);
+padding: 1rem 1.2rem;
+border-radius: var(--panel-radius);
+width: 260px;
+z-index: 2;
+box-shadow: var(--shadow);
 }
 
+
 .panel h2 {
-  margin-top: 0;
-  background-color: #006341;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 6px;
+margin-top: 0;
+background-color: var(--korea-green);
+color: white;
+padding: 0.5rem;
+border-radius: 6px;
+
 }
 
 /* DATA PANEL */
@@ -80,9 +110,9 @@ img{
 
 /* FOOTER */
 footer {
-  background-color: #c8102e;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
+background-color: var(--korea-red);
+color:var(--korea-white);
+text-align: center;
+padding: 1rem;
+width: 100%;
 }
