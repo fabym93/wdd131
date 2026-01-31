@@ -1,0 +1,103 @@
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: rgb(128 0 128);
+  background: #ffffff;
+}
+
+/* Header */
+header {
+  background-color: rgb(88, 64, 191);
+  color: #fff;
+  padding: 16px 20px;
+}
+header h1 {
+  font-size: 20px;
+}
+
+
+header nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 8px;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: #ffd700; /* different text color */
+  background-color: rgba(59, 0, 102,0.75);
+  text-decoration: underline;}
+
+/* Main container */
+main {
+  padding: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 28px};
+
+#temples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.temple-card {
+    border: 2px solid #757575;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+ 
+/* Desktop view */
+@media (min-width: 1024px) {
+  section#temples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/*Button*/
+.hamburger {
+display: none;
+background: transparent;
+border: none;
+color: inherit;
+font-size: 1.25rem;
+cursor: pointer;
+padding: 8px;
+border-radius: 4px;
+} 
+
+/* Footer */
+footer{
+  background: rgb(128 0 128);
+  color: #fff;
+  padding: 14px 16px;
+  text-align: center;
+}
