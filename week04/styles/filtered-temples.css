@@ -9,7 +9,7 @@ html, body {
   padding: 0;
 }
 body {
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(128 0 128);
   background: #ffffff;
 }
@@ -50,7 +50,7 @@ main {
 }
 
 h2{
-  font-size: 28px};
+  font-size: 28px}
 
 #temples {
     display: grid;
