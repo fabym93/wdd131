@@ -1,0 +1,100 @@
+/* Paleta y variables (CSS puro correcto) */
+:root {
+  /* Primary color (Sky Blue) */
+  --color-primary: #1E90FF; /* Sky Blue (Color 1) */
+
+  /* Accent color: Green */
+  --color-accent: #2E8B57; /* Green (Color 2) */
+
+  /* Neutrals and background */
+  --color-background: #F5F9FF; /* Light background (Light Neutral) */
+  --color-background-alt: #F4F6F8; /* Light background alternative */
+  --color-surface: #FFFFFF; /* White (Cards) */
+
+  --color-text: #374151; /* Main text (Dark Gray) */
+  --color-subtext: #6B7280; /* Subtext (Gray) */
+
+  --color-border: #E5E7EB; /* Soft border (very light gray) */
+
+  /* Interactions */
+  --color-hover: #0F6ADE; /* Blue hover (variation) */
+  --color-green-dark: #1F6E41; /* Dark green (hover/active) */
+
+  --accent-warm: #FF8C00; /* Warm accent (optional) */
+  --accent-warm-alt: #E26D5A; /* Warm alternate (optional) */
+
+  /* Shadows and radius */
+  --shadow-sm: 0 2px 6px rgba(0,0,0,.04);
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
+  --radius: 10px;
+
+  /* Base font size */
+  --font-base: 16px;
+}
+
+/* Global */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { font-size: 100%; } /* base 16px */
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: var(--font-base);
+}
+
+/* Typography  */
+.text-lg { font-size: 1.125rem; line-height: 1.75; }
+.text-xl { font-size: 1.25rem; line-height: 1.75; }
+
+h1, h2 {
+  color: var(--color-primary);
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+/* Links  text */
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--color-hover); }
+
+
+/* Galería de imágenes (nuevo bloque) */
+.galeria-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 16px;
+align-items: start;
+padding: 12px 0;
+}
+.imagen-item {
+border: 1px solid var(--color-border);
+border-radius: var(--radius);
+overflow: hidden;
+background: var(--color-surface);
+box-shadow: var(--shadow-sm);
+}
+.imagen-item img {
+width: 100%;
+height: auto;
+display: block;
+}
+.imagen-item figcaption {
+padding: 8px 10px;
+font-size: 0.9rem;
+text-align: center;
+color: var(--color-subtext);
+background: #fff;
+}
+
+/* Footer */
+footer {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  background: var(--color-green-dark); /*darkgreen */
+}

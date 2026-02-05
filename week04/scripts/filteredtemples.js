@@ -185,4 +185,27 @@ function createTempleCard(filteredtemples) {
 
     document.querySelector(".res-grid").appendChild(card);
   });
+
+  displayTemples(temples);
+
+// Navigation filters
+document.querySelector("#home").addEventListener("click", () => displayTemples(temples));
+
+document.querySelector("#old").addEventListener("click", () =>
+    displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900))
+);
+
+document.querySelector("#new").addEventListener("click", () =>
+    displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000))
+);
+
+document.querySelector("#large").addEventListener("click", () =>
+    displayTemples(temples.filter(t => t.area > 90000))
+);
+
+document.querySelector("#small").addEventListener("click", () =>
+    displayTemples(temples.filter(t => t.area < 10000))
+);
+
+
 }
