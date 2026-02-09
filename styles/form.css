@@ -1,0 +1,126 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #e2d1ee;
+    color: #2c2323;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Layout */
+header,
+footer {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* Labels & Inputs */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Fieldsets */
+fieldset {
+    border: none;
+    padding: 0;
+    margin-top: 1.25rem;
+}
+
+legend {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Radio & Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.4rem;
+}
+
+fieldset label {
+    font-weight: normal;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+/* Focus States (Accessibility) */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #0077cc;
+    outline-offset: 2px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+/* Footer */
+footer{
+  background: rgb(128 0 128);
+  color: #fff;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+/* Responsive Enhancement */
+@media (min-width: 600px) {
+    body {
+        padding: 2rem;
+    }
+}
