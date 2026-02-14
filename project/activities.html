@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Adventure | Cabra Corral</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/activities.css">
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+
+    <header class="header-row">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="images/diquelogo.webp" alt="Cabra Corral Logo" class="logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotel.html">Hotel</a></li>
+                    <li><a href="activities.html" class="active">Activities</a></li>
+                    <li><a href="nature.html">Nature</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-area">
+                <a href="hotel.html#reservas" class="btn-reserve">Book Now!</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-short">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Limitless Adventure</h1>
+                <p>From pure adrenaline to relaxing tours under the Salta sun.</p>
+            </div>
+        </section>
+
+        <section class="container activity-grid">
+            
+            <div class="activity-card">
+                <div class="card-image-wrapper">
+                    <img src="images/bungeejump.jpg" alt="Bungee Jumping" class="img-transition">
+                </div>
+                <div class="card-body">
+                    <span class="badge">Adrenaline</span>
+                    <h3>@ExtremeGameSalta</h3>
+                    <p>Bungee jumping, zip-lining, and bridge jumping. The highest dose of adrenaline in Northern Argentina.</p>
+                    <ul class="details">
+                        <li><strong>Requirements:</strong> Min. age 12, comfortable clothing.</li>
+                        <li><strong>Est. Price:</strong> $...</li>
+                    </ul>
+                    <a href="https://www.instagram.com/extremegamesalta/?hl=es" class="btn-secondary">More Info</a>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="card-image-wrapper">
+                    <img src="images/cabra1.jpg" alt="Catamaran Tour" class="img-transition">
+                </div>
+                <div class="card-body">
+                    <span class="badge">Relax</span>
+                    <h3>Catamaran Tours</h3>
+                    <p>Daytime and evening departures. Includes guide and snacks. Ideal for families.</p>
+                    <ul class="details">
+                        <li><strong>Duration:</strong> 1 to 2 hours.</li>
+                        <li><strong>Tip:</strong> Bring sunscreen and water.</li>
+                    </ul>
+                    <a href="https://toursensalta.com/tour/catamaran-los-amigos/" class="btn-secondary">View Schedules</a>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="card-image-wrapper">
+                    <img src="images/waterpark1.jpg" alt="Water Park" class="img-transition">
+                </div>
+                <div class="card-body">
+                    <span class="badge">Family</span>
+                    <h3>Camping & Water Park</h3>
+                    <p>Enjoy "El Préstamo": slides, pools, and camping plots with full services.</p>
+                    <ul class="details">
+                        <li><strong>Services:</strong> Grills, electricity, restrooms.</li>
+                        <li><strong>Park:</strong> Open from 10:00 AM to 7:00 PM.</li>
+                    </ul>
+                    <a href="https://www.instagram.com/elprestamoparqueacuatico/?hl=es" class="btn-secondary">See the Water Park</a>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="card-image-wrapper">
+                    <img src="images/isla.webp" alt="Island Tour" class="img-transition">
+                </div>
+                <div class="card-body">
+                    <span class="badge">Must See</span>
+                    <h3>Isla de los Deseos Tour</h3>
+                    <p>Explore the most untouched corners of the dam and learn about local history.</p>
+                    <ul class="details">
+                        <li><strong>Departures:</strong> Main pier.</li>
+                        <li><strong>Duration:</strong> Approx. 1.5 hours.</li>
+                    </ul>
+                    <a href="https://www.facebook.com/isladelosdeseos/?locale=es_LA" class="btn-secondary">Book Tour</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p> © <span id="currentyear"></span> 🌺 Fabiana E. Moya 🌺 Salta, Argentina </p>
+        <p id="lastModified">Last Modified: </p>
+        <p id="visit-count-display"></p>
+    </footer>
+
+</body>
+</html>

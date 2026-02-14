@@ -1,0 +1,122 @@
+/* --- HERO NATURE --- */
+.hero-nature {
+    position: relative;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('../images/waterpark2.jpg') no-repeat center center/cover;
+}
+
+/* --- TIPS SECTION --- */
+.photo-tips {
+    padding: 60px 20px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.tip-content h2 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.tip-content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.tip-content li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.tip-content li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+}
+
+.tip-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 5px solid var(--primary-blue);
+}
+
+/* --- GALLERY WITH TRANSITION --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 144, 255, 0.7); /* with transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.img-overlay span {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    padding: 10px 20px;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.15);
+}
+
+.gallery-item:hover .img-overlay {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}

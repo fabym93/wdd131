@@ -1,0 +1,96 @@
+/* --- SHORT HERO --- */
+.hero-short {
+    position: relative;
+    height: 40vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('../images/cabra2.jpg') no-repeat center center/cover;
+}
+
+/* --- grid of activities --- */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+}
+
+/* --- transition effect --- */
+.card-image-wrapper {
+    overflow: hidden;
+    height: 220px;
+}
+
+.img-transition {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.activity-card:hover .img-transition {
+    transform: scale(1.1); /* LIGHT ZOOM */
+    filter: brightness(90%);
+}
+
+/* --- BODYCARD --- */
+.card-body {
+    padding: 25px;
+}
+
+.badge {
+    background: var(--bg-light);
+    color: var(--primary-blue);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.details {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.details li {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.details li strong {
+    color: var(--primary-blue);
+}

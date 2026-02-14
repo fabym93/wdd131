@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodging | Hotel del Dique Cabra Corral</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/hotel.css">
+</head>
+<body>
+
+    <header class="header-row">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="images/diquelogo.webp" alt="Logo Cabra Corral" class="logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotel.html" class="active">Hotel</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="nature.html">Nature</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-area">
+                <a href="#reservas" class="btn-reserve">¡Book Now!</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-hotel">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>The best spot facing the lake</h1>
+                <p>Wake up to the best view of the Cabra Corral Dam.</p>
+            </div>
+        </section>
+
+        <section class="container hotel-details">
+            <div class="hotel-info">
+                <h2>Hotel del Dique</h2>
+                <p>Strategically located on the reservoir, our hotel offers an unparalleled experience of comfort and connection with nature.</p>
+                
+                <div class="services-grid">
+                    <div class="service-item">✅ Rooms with lake view</div>
+                    <div class="service-item">✅ Regional cuisine restaurant</div>
+                    <div class="service-item">✅ Swimming pool, solarium, sauna and spa</div>
+                    <div class="service-item">✅ Direct access to the dock</div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-track">
+                       <div class="slide"><img src="images/a.jpg" alt="Hotel View A"></div>
+                       <div class="slide"><img src="images/b.jpg" alt="Hotel View B"></div>
+                       <div class="slide"><img src="images/c.jpg" alt="Hotel View C"></div>
+                       <div class="slide"><img src="images/d.jpg" alt="Hotel View D"></div>
+                       <div class="slide"><img src="images/e.jpg" alt="Hotel View E"></div>
+                       <div class="slide"><img src="images/f.jpg" alt="Hotel View F"></div>
+                       <div class="slide"><img src="images/g.jpg" alt="Hotel View G"></div>
+        
+                       <div class="slide"><img src="images/a.jpg" alt="Hotel View A"></div>
+                       <div class="slide"><img src="images/b.jpg" alt="Hotel View B"></div>
+                       <div class="slide"><img src="images/c.jpg" alt="Hotel View C"></div>
+                       <div class="slide"><img src="images/d.jpg" alt="Hotel View D"></div>
+                       <!--The scroll Infinite animation moves the track to the left. 
+                       Once it reaches the end of the 7th image, it resets instantly to 0. 
+                       Since the 8th, 9th, and 10th images are identical to the first ones, 
+                       the transition is invisible to the user.-->
+    </div>
+</div>
+
+                <div class="pricing-box">
+                    <h3>Approximate Rates</h3>
+                    <p>From<strong>$45.000</strong> per night (Double Base)</p>
+                    <small>*Subject to season and availability.</small>
+                </div>
+            </div>
+
+            <div id="reservas" class="booking-card">
+                <h3>Request a Reservation</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your name.. ">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" placeholder="Your Phone.. ">
+                    </div>
+                    <div class="form-group">
+                        <label>Check-in Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Type of Room</label>
+                        <select>
+                            <option>Double standard</option>
+                            <option>Suite with view</option>
+                            <option>Familiar</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Check Availability</button>
+                </form>
+                <div class="contact-direct">
+                    <p>Or contact us via email:</p>
+                    <a href="mailto:contactus@cabracorral.com">contactus@cabracorral.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+         <p> © <span id="currentyear"></span> 🌺 Fabiana E. Moya 🌺 Salta, Argentina </p>
+        <p id="lastModified">Last Modified: </p>
+        <p id="visit-count-display"></p>
+    </footer>
+     <script src="scripts/index.js"></script>
+</body>
+</html>
